@@ -25,9 +25,6 @@ strimpTextAlphaTarget = 0;
 strimpTextAlpha = strimpTextAlphaTarget;
 
 flashEffect = false;
-
-sparkleTimer = 0;
-sparkleTimerMax = 30;
 #endregion
 #endregion
 

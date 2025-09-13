@@ -24,7 +24,7 @@ if (!localPause)
 				case 1:
 				case 2:
 				case 3:
-				scr_PlaySfx(snd_DL1_Cannonball);
+				//scr_PlaySfx(snd_DL1_Cannonball); STRIMPTODO
 				
 				chestWaveStrength = chestWaveStrengthMax;
 				

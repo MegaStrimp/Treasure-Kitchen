@@ -55,7 +55,7 @@ scr_KSW_LoadMysteryTreats("mysteryTreats.ini");*/
 #endregion
 
 #region Discord Rich Presence Setup
-var appId = "1344734236199878786";
+var appId = "1416431708936343593";
 global.discord = true;
 
 if (!np_initdiscord(appId, true, np_steam_app_id_empty))

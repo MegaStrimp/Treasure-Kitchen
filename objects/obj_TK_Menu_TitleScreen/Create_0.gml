@@ -1,14 +1,16 @@
 ///@description Create
 
 #region Initialize Variables
+#region Component Setup
+scr_Component_ButtonInputTimer_Setup(5);
+#endregion
+
 #region Menu Variables
 playerNum = 0;
 
-state = 0;
-stateTimer = 60;
-stateTimer = -1;
+titleOffset = 1;
 
-sparkleTimer = 0;
-sparkleTimerMax = 30;
+state = 0;
+stateTimer = 105;
 #endregion
 #endregion

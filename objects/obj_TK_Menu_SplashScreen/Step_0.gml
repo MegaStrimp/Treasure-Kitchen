@@ -36,7 +36,7 @@ if (!localPause)
 				case 1:
 				case 2:
 				case 3:
-				scr_PlaySfx(snd_DL1_Cannonball);
+				//scr_PlaySfx(snd_DL1_Cannonball); STRIMPTODO
 				
 				chestWaveStrength = chestWaveStrengthMax;
 				chestShake = chestShakeMax;
@@ -77,19 +77,6 @@ if (!localPause)
 				stateTimer = -1;
 				break;
 			}
-		}
-	}
-	#endregion
-	
-	#region Sparkle Timer
-	if (sparkleTimer != -1)
-	{
-		sparkleTimer = max(sparkleTimer - speedMultFinal,0);
-		if (sparkleTimer == 0)
-		{
-			scr_TK_ParticleSet_Sparkle(irandom_range(0,global.gameWidth),-16,0,random_range(.25,.75));
-			
-			sparkleTimer = sparkleTimerMax;
 		}
 	}
 	#endregion

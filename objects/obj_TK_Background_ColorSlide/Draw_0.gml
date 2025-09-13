@@ -13,15 +13,12 @@ draw_rectangle_color(0,0,global.gameWidth,global.gameHeight,make_color_hsv(color
 #region Pattern
 if (hasPattern)
 {
-	var xx = floor(global.currentTimePausable / 6) % 32;
-	var yy = floor(global.currentTimePausable / 4) % 32;
-	
 	draw_set_alpha(.25);
 	for (var i = 0; i < 9; i++)
 	{
 		for (var h = 0; h < 6; h++)
 		{
-			draw_sprite(spr_TK_Background_Pattern,0,xx + (32 * (i - 1)),yy + (32 * (h - 1)) + patternYOffset);
+			draw_sprite(spr_TK_Background_Pattern,0,patternX + (32 * (i - 1)),patternY + (32 * (h - 1)) + patternYOffset);
 		}
 	}
 	draw_set_alpha(1);

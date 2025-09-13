@@ -9,9 +9,9 @@ if (global.debug)
 }
 else
 {
-	/*scr_AlivelInstaller_Setup("https://github.com/MegaStrimp/KSW-Semi-Closed-Beta/releases/latest/download/KirbySoftAndWet.zip",
-	"https://raw.githubusercontent.com/MegaStrimp/KSW-Semi-Closed-Beta/refs/heads/main/version",
-	targetRoom);*/
+	scr_AlivelInstaller_Setup("https://github.com/MegaStrimp/Treasure-Kitchen/releases/latest/download/KirbySoftAndWet.zip",
+	"https://raw.githubusercontent.com/MegaStrimp/Treasure-Kitchen/refs/heads/main/version",
+	targetRoom);
 	
 	room_goto(targetRoom);
 }

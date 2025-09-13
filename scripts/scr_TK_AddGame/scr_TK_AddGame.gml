@@ -1,6 +1,6 @@
 ///@description TK - Add Game
 
-function scr_TK_AddGame(targetID,targetName = "",targetSavePath = "",targetSaveFileNames = [])
+function scr_TK_AddGame(targetID,targetName = "",targetSavePath = "",targetSaveFileNames = [],targetWebLink = undefined,targetDiscordLink = undefined,targetSourceLink = undefined)
 {
 	ds_map_add(global.TK_GameIDs,targetID,ds_map_size(global.TK_GameIDs));
 	
@@ -11,6 +11,10 @@ function scr_TK_AddGame(targetID,targetName = "",targetSavePath = "",targetSaveF
 		
 		savePath: targetSavePath,
 		saveFileNames: targetSaveFileNames,
+		
+		webLink: targetWebLink,
+		discordLink: targetDiscordLink,
+		sourceLink: targetSourceLink,
 		
 		achievements: [],
 		achievementCount: 0,
