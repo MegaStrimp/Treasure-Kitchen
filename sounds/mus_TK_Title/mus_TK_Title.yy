@@ -1,0 +1,28 @@
+{
+  "$GMSound":"",
+  "%Name":"mus_TK_Title",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":1,
+  "conversionMode":1,
+  "duration":86.19733,
+  "name":"mus_TK_Title",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Treasure Kitchen/Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":48000,
+  "soundFile":"mus_TK_Title.ogg",
+  "tags":[
+    "Music",
+  ],
+  "type":1,
+  "volume":1.0,
+}
