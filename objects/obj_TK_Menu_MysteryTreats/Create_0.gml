@@ -1,14 +1,15 @@
 ///@description Create
 
 #region Initialize Variables
+#region Component Setup
+scr_Component_ButtonInputTimer_Setup(5);
+#endregion
+
 #region Menu Variables
 playerNum = 0;
 
-state = 0;
-stateTimer = 60;
-stateTimer = -1;
-
-sparkleTimer = 0;
-sparkleTimerMax = 30;
+selection = 0;
+//isCompleted = (global.KSW_CaughtUniqueFishCount >= global.KSW_FishCount);
+isCompleted = false;
 #endregion
 #endregion

@@ -31,7 +31,7 @@
   "origin":4,
   "parent":{
     "name":"Icons",
-    "path":"folders/Treasure Kitchen/Achievements/Kirby ~ Soft & Wet/Sprites/Icons.yy",
+    "path":"folders/Treasure Kitchen/Achievements/Games/Kirby ~ Soft & Wet/Sprites/Icons.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

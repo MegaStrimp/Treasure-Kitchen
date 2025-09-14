@@ -1,69 +1,53 @@
 ///@description Main
 
-if (!localPause)
+#region Variables
+var canSelect = true;
+if ((localPause) or
+(instance_exists(obj_Transition))) canSelect = false;
+#endregion
+
+#region Selection
+if (canSelect)
 {
-	#region Skip
-	if ((!instance_exists(obj_Transition)) and ((input_check_pressed("start",playerNum))))
+	if (input_check_pressed("up",playerNum))
 	{
-		room_goto(rm_TK_Menu_TitleScreen);
+		//scr_PlaySfx(snd_KSW_BossHealth);
 		
-		stateTimer = -1;
-	}
-	#endregion
-	
-	#region State Timer
-	if (stateTimer != -1)
-	{
-		stateTimer = max(stateTimer - speedMultFinal,0);
-		if (stateTimer == 0)
+		//pageOffset = selection * selectionOffset;
+		selection -= 1;
+		pageOffsetTarget = selection * selectionOffset;
+		
+		if (selection < 0)
 		{
-			state += 1;
-			
-			switch (state)
-			{
-				case 1:
-				case 2:
-				case 3:
-				//scr_PlaySfx(snd_DL1_Cannonball); STRIMPTODO
-				
-				chestWaveStrength = chestWaveStrengthMax;
-				
-				stateTimer = 60;
-				break;
-				
-				case 4:
-				flashEffect = true;
-				
-				stateTimer = 10;
-				break;
-				
-				case 5:
-				chestIndex = 1;
-				flashEffect = false;
-				
-				stateTimer = 60;
-				break;
-				
-				case 99:
-				room_goto(rm_TK_Menu_TitleScreen);
-				
-				stateTimer = -1;
-				break;
-			}
+			selection += selectionMax;
+			pageOffsetTarget = selection * selectionOffset;
+			pageOffset = pageOffsetTarget;
 		}
 	}
-	#endregion
 	
-	#region Sparkle Timer
-	if (sparkleTimer != -1)
+	if (input_check_pressed("down",playerNum))
 	{
-		sparkleTimer = max(sparkleTimer - speedMultFinal,0);
-		if (sparkleTimer == 0)
+		//scr_PlaySfx(snd_KSW_BossHealth);
+		
+		//pageOffset = selection * selectionOffset;
+		selection += 1;
+		pageOffsetTarget = selection * selectionOffset;
+		
+		if (selection >= selectionMax)
 		{
-			scr_TK_ParticleSet_Sparkle(irandom_range(0,global.gameWidth),-16,0,random_range(.25,.75));
-			
-			sparkleTimer = sparkleTimerMax;
+			selection -= selectionMax;
+			pageOffsetTarget = selection * selectionOffset;
+			pageOffset = pageOffsetTarget;
 		}
 	}
-	#endregion
 }
+#endregion
+
+#region Page Offset
+pageOffset = lerp(pageOffset,pageOffsetTarget,.1);
+pageOffset = clamp(pageOffset,0,(selectionMax - 3) * selectionOffset);
+#endregion
+
+#region Button Input Timers
+scr_Component_ButtonInputTimer_Step();
+#endregion

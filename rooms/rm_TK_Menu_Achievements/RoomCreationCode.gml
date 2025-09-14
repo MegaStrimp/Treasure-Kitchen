@@ -17,5 +17,5 @@ var bg = instance_create_depth(0,0,100,obj_TK_Background_ColorSlide);
 #endregion
 
 #region Discord
-scr_Discord_Setup(global.TK_GameList[global.TK_GameIDs[global.TK_CurrentGameIndex]] + " - " + "Achievements",-1,"icon",global.gameTitle,"strimp","From Strimp's Kitchen");
+scr_Discord_Setup(global.TK_GameList[global.TK_CurrentGameIndex].name + " - " + "Achievements",-1,"icon",global.gameTitle,"strimp","From Strimp's Kitchen");
 #endregion

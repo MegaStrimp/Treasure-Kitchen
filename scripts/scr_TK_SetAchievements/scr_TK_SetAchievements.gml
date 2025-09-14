@@ -10,8 +10,10 @@ function scr_TK_SetAchievements()
 	#region Kirby ~ Soft & Wet
 	var gameID = "ksw";
 	
+	/*
 	var achievementID = "";
 	scr_TK_AddAchievement(gameID + "_" + achievementID,gameID,"",undefined,"achievementStatus",achievementID + "_Obtained");
+	*/
 	
 	var achievementID = "catch1";
 	scr_TK_AddAchievement(gameID + "_" + achievementID,gameID,"Nice Catch!","Catch 1 Fish",spr_TK_Achievement_KSW_Icon_NiceCatch,"achievementStatus",achievementID + "_Obtained");

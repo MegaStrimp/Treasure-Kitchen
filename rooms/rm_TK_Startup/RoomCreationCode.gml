@@ -3,6 +3,9 @@
 #region Go To Next Room
 var targetRoom = rm_TK_Menu_SplashScreen;
 
+var targetRoom = rm_TK_Menu_Achievements;
+global.TK_CurrentGameIndex = 0;
+
 if (global.debug)
 {
 	room_goto(targetRoom);

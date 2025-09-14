@@ -15,6 +15,8 @@ function scr_TK_AddAchievement(targetID,targetGameID,targetName = "",targetDescr
 		icon: targetIcon,
 		isHidden: targetHidden,
 		
+		isObtained: false,
+		
 		section: targetSection,
 		key: targetKey,
 		value: targetValue
