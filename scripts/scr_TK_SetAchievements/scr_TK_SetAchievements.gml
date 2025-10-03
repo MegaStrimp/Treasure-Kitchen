@@ -1,4 +1,4 @@
-///@description TK - Set Achievements
+//@description TK - Set Achievements
 
 function scr_TK_SetAchievements()
 {
