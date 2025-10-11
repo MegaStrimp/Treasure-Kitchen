@@ -3,6 +3,9 @@
 function scr_TK_SetAchievements()
 {
 	#region Setup
+	global.TK_TotalAchievementCount = 0;
+	for (var i = 0; i < global.TK_GameCount; i++) global.TK_AchievementCount[i] = 0;
+	
 	global.TK_AchievementIDs = ds_map_create();
 	#endregion
 	

@@ -1,6 +1,15 @@
 ///@description Create
 
 #region Initialize Variables
+#region Selection List
+selectionList = ds_list_create();
+
+for (var i = 0; i < (global.TK_MysteryTreatCount[global.TK_CurrentGameIndex]); i++)
+{
+	ds_list_add(selectionList,i);
+}
+#endregion
+
 #region Component Setup
 scr_Component_ButtonInputTimer_Setup(5);
 #endregion
@@ -9,7 +18,11 @@ scr_Component_ButtonInputTimer_Setup(5);
 playerNum = 0;
 
 selection = 0;
-//isCompleted = (global.KSW_CaughtUniqueFishCount >= global.KSW_FishCount);
-isCompleted = false;
+selectionMax = global.TK_MysteryTreatCount[global.TK_CurrentGameIndex];
+selectionOffset = 44;
+pageOffset = 0;
+pageOffsetTarget = 0;
+obtainedCount = global.TK_GameList[global.TK_CurrentGameIndex].obtainedMysteryTreatCount;
+isCompleted = (obtainedCount >= selectionMax);
 #endregion
 #endregion

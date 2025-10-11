@@ -2,7 +2,7 @@
 
 function scr_TK_AddGame(targetID,targetName = "",targetSavePath = "",targetSaveFileNames = [],targetWebLink = undefined,targetDiscordLink = undefined,targetSourceLink = undefined)
 {
-	ds_map_add(global.TK_GameIDs,targetID,ds_map_size(global.TK_GameIDs));
+	ds_map_add(global.TK_GameIDs,targetID,global.TK_GameCount);
 	
 	global.TK_GameList[global.TK_GameIDs[? targetID]] = 
 	{
@@ -17,11 +17,11 @@ function scr_TK_AddGame(targetID,targetName = "",targetSavePath = "",targetSaveF
 		sourceLink: targetSourceLink,
 		
 		achievements: [],
-		achievementCount: 0,
 		obtainedAchievementCount: 0,
 		
 		mysteryTreats: [],
-		mysteryTreatCount: 0,
 		obtainedMysteryTreatCount: 0
     };
+	
+	global.TK_GameCount += 1;
 }

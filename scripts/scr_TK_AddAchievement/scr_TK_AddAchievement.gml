@@ -2,12 +2,9 @@
 
 function scr_TK_AddAchievement(targetID,targetGameID,targetName = "",targetDescription = "",targetIcon = undefined,targetHidden = false,targetSection = "",targetKey = "",targetValue = true)
 {
-	ds_map_add(global.TK_AchievementIDs,targetID,ds_map_size(global.TK_AchievementIDs));
+	ds_map_add(global.TK_AchievementIDs,targetID,global.TK_TotalAchievementCount);
 	
-	var tempAchievementCount = global.TK_GameList[global.TK_GameIDs[? targetGameID]].achievementCount;
-	global.TK_GameList[global.TK_GameIDs[? targetGameID]].achievementCount += 1;
-	
-	global.TK_GameList[global.TK_GameIDs[? targetGameID]].achievements[tempAchievementCount] = 
+	global.TK_GameList[global.TK_GameIDs[? targetGameID]].achievements[global.TK_AchievementCount[global.TK_GameIDs[? targetGameID]]] = 
 	{
         id: targetID,
 		name: targetName,
@@ -21,4 +18,8 @@ function scr_TK_AddAchievement(targetID,targetGameID,targetName = "",targetDescr
 		key: targetKey,
 		value: targetValue
     };
+	
+	global.TK_AchievementCount[global.TK_GameIDs[? targetGameID]] += 1;
+	
+	global.TK_TotalAchievementCount += 1;
 }

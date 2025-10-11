@@ -11,9 +11,8 @@ if (canSelect)
 {
 	if (input_check_pressed("up",playerNum))
 	{
-		//scr_PlaySfx(snd_KSW_BossHealth);
+		scr_PlaySfx(snd_TK_BossHealth);
 		
-		//pageOffset = selection * selectionOffset;
 		selection -= 1;
 		pageOffsetTarget = selection * selectionOffset;
 		
@@ -27,9 +26,8 @@ if (canSelect)
 	
 	if (input_check_pressed("down",playerNum))
 	{
-		//scr_PlaySfx(snd_KSW_BossHealth);
+		scr_PlaySfx(snd_TK_BossHealth);
 		
-		//pageOffset = selection * selectionOffset;
 		selection += 1;
 		pageOffsetTarget = selection * selectionOffset;
 		
@@ -45,7 +43,7 @@ if (canSelect)
 
 #region Page Offset
 pageOffset = lerp(pageOffset,pageOffsetTarget,.1);
-pageOffset = clamp(pageOffset,0,(selectionMax - 3) * selectionOffset);
+pageOffset = clamp(pageOffset,0,max(0,(selectionMax - 3)) * selectionOffset);
 #endregion
 
 #region Button Input Timers

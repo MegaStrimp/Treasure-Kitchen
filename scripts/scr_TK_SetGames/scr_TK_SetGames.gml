@@ -3,6 +3,8 @@
 function scr_TK_SetGames()
 {
 	#region Setup
+	global.TK_GameCount = 0;
+	
 	global.TK_GameList = [];
 	global.TK_GameIDs = ds_map_create();
 	#endregion
