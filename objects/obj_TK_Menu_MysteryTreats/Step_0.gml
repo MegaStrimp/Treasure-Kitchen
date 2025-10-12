@@ -38,6 +38,13 @@ if (canSelect)
 			pageOffset = pageOffsetTarget;
 		}
 	}
+	
+	if (input_check_pressed("B",playerNum))
+	{
+		scr_PlaySfx(snd_TK_ButtonNo);
+		
+		scr_GoToRoom(rm_TK_Menu_Games,true);
+	}
 }
 #endregion
 

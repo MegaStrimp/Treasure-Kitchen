@@ -18,6 +18,8 @@ global.gameTitle = "Treasure Kitchen";
 global.versionNumber = "0.1.0";
 
 global.TK_CurrentGameIndex = 0;
+global.TK_GamesMenuPage = 0;
+global.TK_GamesMenuButtonSelection = 0;
 
 scr_TK_SetGames();
 scr_TK_SetAchievements();
