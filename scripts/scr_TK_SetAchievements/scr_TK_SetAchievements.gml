@@ -109,9 +109,5 @@ function scr_TK_SetAchievements()
 	#region Kirby Gamble Galaxy Stories ~ The Future
 	var gameID = "ggsFuture";
 	#endregion
-	
-	#region Deirdre
-	var gameID = "deirdre";
-	#endregion
 	#endregion
 }

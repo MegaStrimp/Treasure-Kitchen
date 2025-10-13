@@ -22,11 +22,5 @@ function scr_TK_SetGames()
 	
 	scr_TK_AddGame("ggsFuture","Kirby Gamble Galaxy Stories ~ The Future",targetDescription,spr_TK_Games_GGSFuture_Icon);
 	#endregion
-	
-	#region Deirdre
-	var targetDescription = "";
-	
-	scr_TK_AddGame("deirdre","Deirdre",targetDescription,spr_TK_Games_Deirdre_Icon);
-	#endregion
 	#endregion
 }
