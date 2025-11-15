@@ -1,15 +1,17 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"mus_TK_Title",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":1,
   "compression":1,
+  "compressionQuality":4,
   "conversionMode":1,
   "duration":86.19733,
+  "exportDir":"",
   "name":"mus_TK_Title",
   "parent":{
     "name":"Music",
@@ -23,6 +25,5 @@
   "tags":[
     "Music",
   ],
-  "type":1,
   "volume":1.0,
 }

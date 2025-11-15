@@ -1,13 +1,14 @@
 {
-  "$GMSound":"",
+  "$GMSound":"v2",
   "%Name":"snd_TK_ButtonError",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "bitRate":128,
+  "channelFormat":1,
   "compression":0,
+  "compressionQuality":4,
   "ConfigValues":{
     "DesktopDebug":{
       "audioGroupId":"{ \"name\":\"audiogroup_default\", \"path\":\"audiogroups/audiogroup_default\" }",
@@ -15,6 +16,7 @@
   },
   "conversionMode":0,
   "duration":0.5297052,
+  "exportDir":"",
   "name":"snd_TK_ButtonError",
   "parent":{
     "name":"Sound Effects",
@@ -28,6 +30,5 @@
   "tags":[
     "Sound Effect",
   ],
-  "type":1,
   "volume":1.0,
 }
